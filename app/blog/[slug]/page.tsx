@@ -1,18 +1,27 @@
 import { getBlogDetail } from "@/lib/microcms";
 import Image from "next/image";
+import { Suspense } from "react";
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export default async function Page(props: Props) {
-  const blog = await getBlogDetail(props.params.slug);
+  return (
+    <Suspense fallback={<p>loading...</p>}>
+      <PageContent params={props.params} />
+    </Suspense>
+  );
+}
+
+async function PageContent(props: Props) {
+  const params = await props.params;
+  const blog = await getBlogDetail(params.slug);
   if (!blog) return;
 
   return (
-    <main>
       <article>
         <h1>{blog.title}</h1>
           {blog.eyecatch && (
@@ -25,6 +34,5 @@ export default async function Page(props: Props) {
         )}
         <div dangerouslySetInnerHTML={{ __html: blog.body }} />
       </article>
-    </main>
-  );
+  )
 }
