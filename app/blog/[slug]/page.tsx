@@ -32,7 +32,7 @@ async function PageContent(props: Props) {
               height={blog.eyecatch.height}
             />
         )}
-        <div dangerouslySetInnerHTML={{ __html: blog.body }} />
+        <div className="blog-detail" dangerouslySetInnerHTML={{ __html: blog.body }} />
       </article>
   )
 }
