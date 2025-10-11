@@ -2,6 +2,8 @@ import { getBlogList } from "@/lib/microcms";
 import Link from "next/link";
 import { Suspense } from "react";
 
+export const revalidate = 60;
+
 export default async function Page() {
   return (
     <Suspense fallback={<p>loading...</p>}>
@@ -11,7 +13,9 @@ export default async function Page() {
 };
 
 export async function PageContent() {
-  const data = await getBlogList();
+  const data = await getBlogList({
+    orders: "-publishedAt",
+  });
 
   return (
     <ul>
