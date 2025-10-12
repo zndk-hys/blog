@@ -27,7 +27,7 @@ export async function getBlogDetail(contentId: string, queries?: MicroCMSQueries
         queries,
         customRequestInit: {
             next: {
-                revalidate: 60,
+                revalidate: 0,
             }
         },
     }).catch(notFound);
