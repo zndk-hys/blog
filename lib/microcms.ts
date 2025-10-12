@@ -25,6 +25,11 @@ export async function getBlogDetail(contentId: string, queries?: MicroCMSQueries
         endpoint: 'blog',
         contentId,
         queries,
+        customRequestInit: {
+            next: {
+                revalidate: 60,
+            }
+        },
     }).catch(notFound);
 
     return detailData;
