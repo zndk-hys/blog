@@ -1,7 +1,7 @@
 import { getBlogDetail } from "@/lib/microcms";
+import { formatDate } from "@/lib/utils";
 import Image from "next/image";
 import { Suspense } from "react";
-import { format } from 'date-fns';
 
 export const revalidate = 60;
 
@@ -29,7 +29,7 @@ async function PageContent(props: Props) {
         <h1 className="text-3xl font-bold mb-2">{blog.title}</h1>
         {blog.publishedAt && (
           <p className="text-sm text-gray-500 dark:text-gray-400 mb-8">
-            {format(new Date(blog.publishedAt), 'yyyy/MM/dd')}
+            {formatDate(new Date(blog.publishedAt), 'yyyy/MM/dd')}
           </p>
         )}
         {blog.eyecatch && (

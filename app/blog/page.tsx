@@ -1,7 +1,7 @@
 import { getBlogList } from "@/lib/microcms";
+import { formatDate } from "@/lib/utils";
 import Link from "next/link";
 import { Suspense } from "react";
-import { format } from 'date-fns';
 
 export const revalidate = 60;
 
@@ -34,7 +34,7 @@ async function PageContent() {
               <div className="flex items-baseline space-x-4">
                 {post.publishedAt && (
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    {format(new Date(post.publishedAt), 'yyyy/MM/dd')}
+                    {formatDate(new Date(post.publishedAt), 'yyyy/MM/dd')}
                   </p>
                 )}
                 <h2 className="text-2xl font-bold group-hover:text-blue-500 transition-colors">
