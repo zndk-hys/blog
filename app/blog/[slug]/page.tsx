@@ -2,7 +2,7 @@ import { getBlogDetail } from "@/lib/microcms";
 import { formatDate } from "@/lib/utils";
 import Image from "next/image";
 
-export const revalidate = 60;
+export const revalidate = false;
 
 type Props = {
   params: Promise<{
