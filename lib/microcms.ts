@@ -16,6 +16,11 @@ export async function getBlogList(queries?: MicroCMSQueries) {
     const listData = await client.getList<Blog>({
         endpoint: 'blog',
         queries,
+        customRequestInit: {
+            next: {
+                revalidate: 60,
+            }
+        },
     }).catch(notFound);
     return listData;
 }
