@@ -1,32 +1,50 @@
 import { getBlogList } from "@/lib/microcms";
 import Link from "next/link";
 import { Suspense } from "react";
+import { format } from 'date-fns';
 
 export const revalidate = 60;
 
 export default async function Page() {
   return (
-    <Suspense fallback={<p>loading...</p>}>
-      <PageContent />
-    </Suspense>
+    <div>
+      <Suspense fallback={<p className="text-gray-500">loading...</p>}>
+        <PageContent />
+      </Suspense>
+    </div>
   )
 };
 
-export async function PageContent() {
+async function PageContent() {
   const data = await getBlogList({
     orders: "-publishedAt",
   });
 
+  if (!data.contents || data.contents.length === 0) {
+    return <p>ブログ記事がありません。</p>;
+  }
+
   return (
-    <ul>
+    <div className="space-y-8">
       {data.contents.map((post) => {
         const id = post.id;
         return (
-          <li key={id}>
-            <Link href={`/blog/${id}`}>{post.title}</Link>
-          </li>
+          <article key={id} className="group">
+            <Link href={`/blog/${id}`}>
+              <div className="flex items-baseline space-x-4">
+                {post.publishedAt && (
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    {format(new Date(post.publishedAt), 'yyyy/MM/dd')}
+                  </p>
+                )}
+                <h2 className="text-2xl font-bold group-hover:text-blue-500 transition-colors">
+                  {post.title}
+                </h2>
+              </div>
+            </Link>
+          </article>
         )
       })}
-    </ul>
+    </div>
   )
 }
