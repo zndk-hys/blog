@@ -1,7 +1,6 @@
 import { getBlogDetail } from "@/lib/microcms";
 import { formatDate } from "@/lib/utils";
 import Image from "next/image";
-import { Suspense } from "react";
 
 export const revalidate = 60;
 
@@ -13,9 +12,7 @@ type Props = {
 
 export default async function Page(props: Props) {
   return (
-    <Suspense fallback={<p className="text-gray-500">loading...</p>}>
-      <PageContent params={props.params} />
-    </Suspense>
+    <PageContent params={props.params} />
   );
 }
 

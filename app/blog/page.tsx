@@ -1,16 +1,13 @@
 import { getBlogList } from "@/lib/microcms";
 import { formatDate } from "@/lib/utils";
 import Link from "next/link";
-import { Suspense } from "react";
 
 export const revalidate = 60;
 
 export default async function Page() {
   return (
     <div>
-      <Suspense fallback={<p className="text-gray-500">loading...</p>}>
-        <PageContent />
-      </Suspense>
+      <PageContent />
     </div>
   )
 };
