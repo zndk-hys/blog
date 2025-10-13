@@ -9,7 +9,6 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,12 +25,14 @@ body {
 
 @layer components {
   .blog-detail {
+    @apply break-all;
+
     h2 {
-      @apply text-2xl font-bold mt-10 mb-4 dark:text-gray-200;
+      @apply text-2xl font-bold mt-10 mb-3 dark:text-gray-200 border-b border-gray-300 pb-3;
     }
 
     h3 {
-      @apply text-xl font-bold mt-8 mb-4 dark:text-gray-300;
+      @apply text-xl font-bold mt-6 mb-4 dark:text-gray-300;
     }
 
     p {
@@ -63,10 +64,9 @@ body {
     }
 
     code {
-      @apply bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded-sm font-mono text-sm;
+      @apply bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-sm font-mono text-sm;
     }
 
-    /* Code inside pre should not have extra background */
     pre code {
       @apply bg-transparent p-0 rounded-none;
     }
