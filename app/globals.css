@@ -9,6 +9,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -65,10 +66,12 @@ body {
 
     code {
       @apply bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-sm font-mono text-sm;
+      font-variant-ligatures: none;
     }
 
     pre code {
       @apply bg-transparent p-0 rounded-none;
+      font-variant-ligatures: none;
     }
   }
 }

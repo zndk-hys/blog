@@ -33,7 +33,7 @@ async function PageContent() {
             <Link href={`/blog/${id}`}>
               <div className="flex items-baseline space-x-4">
                 {post.publishedAt && (
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <p className="text-sm text-gray-500 dark:text-gray-400 font-mono">
                     {formatDate(new Date(post.publishedAt), 'yyyy/MM/dd')}
                   </p>
                 )}

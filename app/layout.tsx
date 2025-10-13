@@ -1,17 +1,18 @@
 import './globals.css'
 import { ReactNode } from "react";
 import Link from 'next/link';
+import { jetBrainsMono } from '@/lib/fonts';
 
 export default function RootLayout({children}: {children: ReactNode}) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={jetBrainsMono.variable}>
       <body className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
         <div className="min-h-screen flex flex-col">
           <header className="border-b border-gray-200 dark:border-gray-700">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between h-16">
                 <h1 className="text-xl font-bold">
-                  <Link href="/blog/" className="hover:text-blue-500">
+                  <Link href="/blog/" className={`hover:text-blue-500`}>
                     Blog
                   </Link>
                 </h1>
