@@ -29,19 +29,26 @@ async function PageContent() {
       {data.contents.map((post) => {
         const id = post.id;
         return (
-          <article key={id} className="group">
-            <Link href={`/blog/${id}`}>
-              <div className="flex items-baseline space-x-4">
-                {post.publishedAt && (
-                  <p className="text-sm text-gray-500 dark:text-gray-400 font-mono">
-                    {formatDate(new Date(post.publishedAt), 'yyyy/MM/dd')}
-                  </p>
-                )}
-                <h2 className="text-2xl font-bold group-hover:text-blue-500 transition-colors">
-                  {post.title}
+          <article key={id}>
+            <div className="flex items-baseline space-x-4">
+              {post.publishedAt && (
+                <p className="text-sm text-gray-500 dark:text-gray-400 font-mono">
+                  {formatDate(new Date(post.publishedAt), 'yyyy/MM/dd')}
+                </p>
+              )}
+              <div>
+                <h2 className="text-2xl font-bold hover:text-blue-500 transition-colors">
+                  <Link href={`/blog/${id}`}>{post.title}</Link>
                 </h2>
+                {post.tags && (
+                  <ul>
+                    {post.tags.map(tag => (
+                      <li key={tag.id}>{tag.name}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
-            </Link>
+            </div>
           </article>
         )
       })}

@@ -32,6 +32,13 @@ async function PageContent(props: Props) {
             {formatDate(new Date(blog.publishedAt), 'yyyy/MM/dd')}
           </p>
         )}
+        {blog.tags && (
+          <ul>
+            {blog.tags.map(tag => (
+              <li key={tag.id}>{tag.name}</li>
+            ))}
+          </ul>
+        )}
         {blog.eyecatch && (
           <div className="relative w-full h-auto mb-8">
             <Image
