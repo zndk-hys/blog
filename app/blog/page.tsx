@@ -41,9 +41,9 @@ async function PageContent() {
                   <Link href={`/blog/${id}`}>{post.title}</Link>
                 </h2>
                 {post.tags && (
-                  <ul>
+                  <ul className="flex flex-wrap items-baseline space-x-2 gap-y-2 mt-1">
                     {post.tags.map(tag => (
-                      <li key={tag.id}>{tag.name}</li>
+                      <li key={tag.id} className="text-gray-500 dark:text-gray-400 text-sm">#{tag.name}</li>
                     ))}
                   </ul>
                 )}

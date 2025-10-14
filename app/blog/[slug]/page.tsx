@@ -27,18 +27,20 @@ async function PageContent(props: Props) {
   return (
       <article>
         <h1 className="text-3xl font-bold mb-2">{blog.title}</h1>
-        {blog.publishedAt && (
-          <p className="text-sm text-gray-500 dark:text-gray-400 mb-8 font-mono">
-            {formatDate(new Date(blog.publishedAt), 'yyyy/MM/dd')}
-          </p>
-        )}
-        {blog.tags && (
-          <ul>
-            {blog.tags.map(tag => (
-              <li key={tag.id}>{tag.name}</li>
-            ))}
-          </ul>
-        )}
+        <div className="flex justify-between items-center mb-8">
+          {blog.tags && (
+            <ul className="flex flex-wrap items-baseline space-x-2 gap-y-2">
+              {blog.tags.map(tag => (
+                <li key={tag.id} className="text-gray-500 dark:text-gray-400 text-sm">#{tag.name}</li>
+              ))}
+            </ul>
+          )}
+          {blog.publishedAt && (
+            <p className="text-sm text-gray-500 dark:text-gray-400 font-mono">
+              {formatDate(new Date(blog.publishedAt), 'yyyy/MM/dd')}
+            </p>
+          )}
+        </div>
         {blog.eyecatch && (
           <div className="relative w-full h-auto mb-8">
             <Image

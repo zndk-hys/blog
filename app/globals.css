@@ -29,7 +29,7 @@ body {
     @apply break-all;
 
     h2 {
-      @apply text-2xl font-bold mt-10 mb-3 dark:text-gray-200 border-b border-gray-300 pb-3;
+      @apply text-2xl font-bold bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mt-10 mb-3;
     }
 
     h3 {
