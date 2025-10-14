@@ -6,10 +6,15 @@ export const client = createClient({
     apiKey: process.env.MICROCMS_API_KEY!,
 });
 
+export type Tag = {
+    name: string;
+} & MicroCMSContentId & MicroCMSDate;
+
 export type Blog = {
     title: string;
     body: string;
     eyecatch?: MicroCMSImage;
+    tags: Tag[];
 } & MicroCMSContentId & MicroCMSDate;
 
 export async function getBlogList(queries?: MicroCMSQueries) {
