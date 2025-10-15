@@ -44,3 +44,18 @@ export async function getBlogDetail(contentId: string, queries?: MicroCMSQueries
 
     return detailData;
 }
+
+export async function getTagDetail(contentId: string, queries?: MicroCMSQueries) {
+    const detailData = await client.getListDetail<Tag>({
+        endpoint: 'tag',
+        contentId,
+        queries,
+        customRequestInit: {
+            next: {
+                revalidate: 60,
+            }
+        },
+    }).catch(notFound);
+
+    return detailData;
+}

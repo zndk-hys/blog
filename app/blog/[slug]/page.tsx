@@ -1,6 +1,7 @@
 import { getBlogDetail } from "@/lib/microcms";
 import { formatDate } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 import { Suspense } from "react";
 
 export const revalidate = 60;
@@ -31,7 +32,7 @@ async function PageContent(props: Props) {
           {blog.tags && (
             <ul className="flex flex-wrap items-baseline space-x-2 gap-y-2">
               {blog.tags.map(tag => (
-                <li key={tag.id} className="text-gray-500 dark:text-gray-400 text-sm">#{tag.name}</li>
+                <li key={tag.id} className="text-gray-500 dark:text-gray-400 text-sm hover:underline"><Link href={`/blog/tags/${tag.id}`}>#{tag.name}</Link></li>
               ))}
             </ul>
           )}
