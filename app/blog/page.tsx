@@ -43,7 +43,7 @@ async function PageContent() {
                 {post.tags && (
                   <ul className="flex flex-wrap items-baseline space-x-2 gap-y-2 mt-1">
                     {post.tags.map(tag => (
-                      <li key={tag.id} className="text-gray-500 dark:text-gray-400 text-sm">#{tag.name}</li>
+                      <li key={tag.id} className="text-gray-500 dark:text-gray-400 text-sm hover:underline"><Link href={`/blog/tags/${tag.id}`}>#{tag.name}</Link></li>
                     ))}
                   </ul>
                 )}
