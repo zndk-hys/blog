@@ -2,7 +2,6 @@ import { getBlogDetail } from "@/lib/microcms";
 import { formatDate } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
 
 export const dynamic = 'force-static';
 export const revalidate = false;
@@ -14,12 +13,6 @@ type Props = {
 };
 
 export default async function Page(props: Props) {
-  return (
-    <PageContent params={props.params} />
-  );
-}
-
-async function PageContent(props: Props) {
   const params = await props.params;
   const blog = await getBlogDetail(params.slug);
   if (!blog) return <p>記事が見つかりませんでした。</p>;
@@ -31,7 +24,9 @@ async function PageContent(props: Props) {
           {blog.tags && (
             <ul className="flex flex-wrap items-baseline space-x-2 gap-y-2">
               {blog.tags.map(tag => (
-                <li key={tag.id} className="text-gray-500 dark:text-gray-400 text-sm hover:underline"><Link href={`/blog/tags/${tag.id}`}>#{tag.name}</Link></li>
+                <li key={tag.id} className="text-gray-500 dark:text-gray-400 text-sm hover:underline">
+                  <Link href={`/blog/tags/${tag.id}`}>#{tag.name}</Link>
+                </li>
               ))}
             </ul>
           )}

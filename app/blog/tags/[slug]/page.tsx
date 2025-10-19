@@ -1,6 +1,5 @@
 import ArticleList from "@/components/ArticleList";
 import { getBlogList, getTagDetail } from "@/lib/microcms";
-import { Suspense } from "react";
 
 type Props = {
   params: Promise<{
@@ -9,16 +8,6 @@ type Props = {
 };
 
 export default async function Page(props: Props) {
-  return (
-    <div>
-      <Suspense fallback={<p className="text-gray-500">loading...</p>}>
-        <PageContent params={props.params}/>
-      </Suspense>
-    </div>
-  )
-};
-
-async function PageContent(props: Props) {
   const params = await props.params;
   
   const tagSlug = params.slug;
