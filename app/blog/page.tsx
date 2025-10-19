@@ -2,8 +2,6 @@ import ArticleList from "@/components/ArticleList";
 import { getBlogList } from "@/lib/microcms";
 import { Suspense } from "react";
 
-export const revalidate = 60;
-
 export default async function Page() {
   return (
     <div>

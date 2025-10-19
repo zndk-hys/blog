@@ -4,8 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 
-export const revalidate = 60;
-
 type Props = {
   params: Promise<{
     slug: string;

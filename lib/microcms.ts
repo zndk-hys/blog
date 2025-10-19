@@ -22,9 +22,6 @@ export async function getBlogList(queries?: MicroCMSQueries) {
         endpoint: 'blog',
         queries,
         customRequestInit: {
-            next: {
-                revalidate: 60,
-            }
         },
     }).catch(notFound);
     return listData;
@@ -36,9 +33,6 @@ export async function getBlogDetail(contentId: string, queries?: MicroCMSQueries
         contentId,
         queries,
         customRequestInit: {
-            next: {
-                revalidate: 60,
-            }
         },
     }).catch(notFound);
 
@@ -51,9 +45,6 @@ export async function getTagDetail(contentId: string, queries?: MicroCMSQueries)
         contentId,
         queries,
         customRequestInit: {
-            next: {
-                revalidate: 60,
-            }
         },
     }).catch(notFound);
 

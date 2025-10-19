@@ -2,8 +2,6 @@ import ArticleList from "@/components/ArticleList";
 import { getBlogList, getTagDetail } from "@/lib/microcms";
 import { Suspense } from "react";
 
-export const revalidate = 60;
-
 type Props = {
   params: Promise<{
     slug: string;
