@@ -15,9 +15,7 @@ type Props = {
 
 export default async function Page(props: Props) {
   return (
-    <Suspense fallback={<p className="text-gray-500">loading...</p>}>
-      <PageContent params={props.params} />
-    </Suspense>
+    <PageContent params={props.params} />
   );
 }
 
