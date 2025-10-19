@@ -32,8 +32,11 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({error: 'Invalid signature.'}, {status: 401});
   }
 
+  const json = await request.json();
+
   // キャッシュの破棄
   revalidatePath('/blog');
+  revalidatePath(`/blog/${json.id}`);
   
   return NextResponse.json({ok: true}, {status: 200});
 }
