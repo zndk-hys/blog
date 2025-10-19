@@ -30,7 +30,7 @@ export default function ArticleList({data}: Props) {
               )}
               <div>
                 <h2 className="text-2xl font-bold hover:text-blue-500 transition-colors">
-                  <Link href={`/blog/${id}`}>{post.title}</Link>
+                  <Link href={`/blog/${id}`} prefetch={false}>{post.title}</Link>
                 </h2>
                 {post.tags && (
                   <ul className="flex flex-wrap items-baseline space-x-2 gap-y-2 mt-1">
