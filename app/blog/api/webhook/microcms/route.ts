@@ -10,11 +10,9 @@ export async function POST(request: NextRequest) {
     console.log('not found x-microcms-signature header');
     return NextResponse.json({error: 'Invalid signature.'}, {status: 401});
   }
-  console.log('x-microcms-signature: ' + signature);
 
   const secret = process.env.MICROCMS_WEBHOOK_SECRET;
   if (!secret) {
-    console.log('not found SECRET env: ' + signature);
     return NextResponse.json({error: 'Server error'}, {status: 500});
   }
 
@@ -27,8 +25,6 @@ export async function POST(request: NextRequest) {
   const expBuf = Buffer.from(expectedSignature, 'hex');
 
   if (sigBuf.length !== expBuf.length || !crypto.timingSafeEqual(sigBuf, expBuf)) {
-    console.log('exp: '+ expectedSignature);
-    console.log('not match signature');
     return NextResponse.json({error: 'Invalid signature.'}, {status: 401});
   }
 
