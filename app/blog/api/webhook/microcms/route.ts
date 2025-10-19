@@ -7,7 +7,6 @@ export async function POST(request: NextRequest) {
 
   const signature = request.headers.get('x-microcms-signature');
   if (!signature) {
-    console.log('not found x-microcms-signature header');
     return NextResponse.json({error: 'Invalid signature.'}, {status: 401});
   }
 
