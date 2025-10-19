@@ -14,9 +14,13 @@ type Props = {
 };
 
 export default async function Page(props: Props) {
-  return (
-    <PageContent params={props.params} />
-  );
+  const { slug } = await props.params;
+
+  // 検証用に 1.2 秒待つ（遷移先でサスペンドさせる）
+  await new Promise(r => setTimeout(r, 1200));
+
+  const blog = await getBlogDetail(slug); // ← 実処理
+  return <article><h1>{blog.title}</h1></article>;
 }
 
 async function PageContent(props: Props) {
