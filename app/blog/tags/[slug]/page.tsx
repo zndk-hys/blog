@@ -11,12 +11,13 @@ export default async function Page(props: Props) {
   const params = await props.params;
   
   const tagSlug = params.slug;
-  const tag = await getTagDetail(tagSlug);
-
-  const data = await getBlogList({
-    orders: "-publishedAt",
-    filters: `tags[contains]${tagSlug}`,
-  });
+  const [tag, data] = await Promise.all([
+    getTagDetail(tagSlug),
+    getBlogList({
+      orders: "-publishedAt",
+      filters: `tags[contains]${tagSlug}`,
+    }),
+  ]);
 
   return (
     <>
