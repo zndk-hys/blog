@@ -3,16 +3,26 @@ import Pagination from "@/components/Pagenation";
 import { POSTS_PER_PAGE } from "@/constants";
 import { getBlogList } from "@/lib/microcms";
 
-export default async function Page() {
+type Props = {
+  params: Promise<{
+    num: string;
+  }>;
+}
+
+export default async function Page(props: Props) {
+  const params = await props.params;
+  const num = parseInt(params.num);
+
   const data = await getBlogList({
     orders: "-publishedAt",
     limit: POSTS_PER_PAGE,
+    offset: (num - 1) * POSTS_PER_PAGE,
   });
 
   return (
     <>
       <ArticleList data={data} />
-      <Pagination totalCount={data.totalCount} />
+      <Pagination totalCount={data.totalCount} currentPage={parseInt(params.num)} />
     </>
   )
 }
