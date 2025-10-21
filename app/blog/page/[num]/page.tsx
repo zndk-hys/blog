@@ -1,5 +1,5 @@
 import ArticleList from "@/components/ArticleList";
-import Pagination from "@/components/Pagenation";
+import Pagination from "@/components/Pagination";
 import { POSTS_PER_PAGE } from "@/constants";
 import { getBlogList } from "@/lib/microcms";
 
