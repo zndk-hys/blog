@@ -26,14 +26,22 @@ body {
 
 @layer components {
   .blog-detail {
-    @apply break-all;
+    @apply break-all text-[15px] md:text-[15.8px];
 
     h2 {
-      @apply text-2xl font-bold bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mt-10 mb-3;
+      @apply text-2xl font-bold bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mt-12 mb-5;
+    }
+
+    h2:first-child {
+      @apply mt-10;
     }
 
     h3 {
-      @apply text-xl font-bold pl-4 mt-6 mb-4 dark:text-gray-300 relative;
+      @apply text-xl font-bold pl-4 mt-10 mb-5 dark:text-gray-300 relative;
+    }
+
+    h2 + h3 {
+      @apply mt-6;
     }
 
     h3::before {
@@ -45,7 +53,7 @@ body {
     }
 
     p {
-      @apply leading-relaxed my-4;
+      @apply leading-relaxed my-3;
     }
 
     a {
@@ -61,7 +69,7 @@ body {
     }
 
     li {
-      @apply ml-4;
+      @apply ml-4 leading-relaxed;
     }
 
     blockquote {
@@ -73,13 +81,17 @@ body {
     }
 
     code {
-      @apply bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-sm font-mono text-sm;
+      @apply bg-gray-100 dark:bg-gray-800 px-2 py-[2px] rounded-sm font-mono text-[14px];
       font-variant-ligatures: none;
     }
 
     pre code {
-      @apply bg-transparent p-0 rounded-none;
+      @apply bg-transparent p-0 rounded-none text-[13.5px];
       font-variant-ligatures: none;
+    }
+
+    pre:has(code) {
+      line-height: 1.3;
     }
   }
 }
