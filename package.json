@@ -9,12 +9,14 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@radix-ui/react-icons": "^1.3.2",
     "date-fns": "^4.1.0",
     "date-fns-tz": "^3.2.0",
     "microcms-js-sdk": "^3.2.0",
     "next": "15.5.4",
     "next-sitemap": "^4.2.3",
     "nextjs-toploader": "^3.9.17",
+    "radix-ui": "^1.4.3",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },

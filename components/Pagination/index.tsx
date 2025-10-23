@@ -1,6 +1,6 @@
 import { POSTS_PER_PAGE } from "@/constants";
 import Link from "next/link";
-import PagenationSelect from "../PaginationSelect";
+import PagenationSelect from "@/components/PaginationSelect";
 
 type Props = {
   totalCount: number;
@@ -18,8 +18,8 @@ export default function Pagination({totalCount, currentPage = 1}: Props) {
   }
 
   return (
-    <div className="grid grid-cols-3 gap-4 mt-8">
-      <div className="text-center">
+    <div className="grid grid-cols-3 gap-4 items-center mt-8">
+      <div className="text-center text-[15px] hover:text-blue-500 transition-colors">
         {currentPage > 1 && (
           <Link href={currentPage === 2 ? `/blog` : `/blog/page/${currentPage - 1}`}>前へ</Link>
         )}
@@ -27,7 +27,7 @@ export default function Pagination({totalCount, currentPage = 1}: Props) {
       <div className="text-center">
         <PagenationSelect maxPageNum={maxPageNum} currentPage={currentPage} />
       </div>
-      <div className="text-center">
+      <div className="text-center text-[15px] hover:text-blue-500 transition-colors">
         {currentPage < maxPageNum && (
           <Link href={`/blog/page/${currentPage + 1}`}>次へ</Link>
         )}
