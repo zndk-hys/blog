@@ -1,11 +1,22 @@
 import ArticleList from "@/components/ArticleList";
 import { getBlogList, getTagDetail } from "@/lib/microcms";
+import { Metadata } from "next";
 
 type Props = {
   params: Promise<{
     slug: string;
   }>;
 };
+
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
+  const tagSlug = params.slug;
+  const tag = await getTagDetail(tagSlug);
+
+  return {
+    title: `blog | #${tag.name}`,
+  };
+}
 
 export default async function Page(props: Props) {
   const params = await props.params;
