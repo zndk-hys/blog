@@ -1,5 +1,6 @@
 import { getBlogDetail } from "@/lib/microcms";
 import { formatDate } from "@/lib/utils";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,6 +12,16 @@ type Props = {
     slug: string;
   }>;
 };
+
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
+  const blog = await getBlogDetail(params.slug);
+  if (!blog) return {};
+
+  return {
+    title: `${blog.title} | blog`,
+  };
+}
 
 export default async function Page(props: Props) {
   const params = await props.params;
