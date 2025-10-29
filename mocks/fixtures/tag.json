@@ -1,0 +1,242 @@
+[
+  {
+    "name": "かぐ",
+    "id": "RgGDcSSPxv",
+    "createdAt": "2025-05-26T16:07:40.785Z",
+    "updatedAt": "2025-05-26T20:47:16.230Z",
+    "publishedAt": "2025-06-24T13:07:19.192Z",
+    "revisedAt": "2025-06-25T13:03:15.152Z"
+  },
+  {
+    "name": "左右",
+    "id": "zKsFhWSWLj",
+    "createdAt": "2024-11-17T01:39:22.434Z",
+    "updatedAt": "2024-11-17T15:34:35.765Z",
+    "publishedAt": "2026-06-17T13:48:28.032Z",
+    "revisedAt": "2026-06-17T17:03:13.568Z"
+  },
+  {
+    "name": "おおごえ",
+    "id": "qqYUYlGaSq",
+    "createdAt": "2025-08-28T07:18:27.869Z",
+    "updatedAt": "2025-08-28T21:33:59.006Z",
+    "publishedAt": "2026-05-15T17:50:29.041Z",
+    "revisedAt": "2026-05-16T14:34:06.461Z"
+  },
+  {
+    "name": "約する",
+    "id": "fNABKwGJYH",
+    "createdAt": "2026-03-09T09:13:18.500Z",
+    "updatedAt": "2026-03-09T13:57:49.630Z",
+    "publishedAt": "2026-02-28T04:02:48.680Z",
+    "revisedAt": "2026-02-28T06:04:48.202Z"
+  },
+  {
+    "name": "はんだんする",
+    "id": "CyzAOjzbAh",
+    "createdAt": "2025-06-28T03:19:45.831Z",
+    "updatedAt": "2025-06-28T07:04:06.555Z",
+    "publishedAt": "2026-09-29T08:08:24.490Z",
+    "revisedAt": "2026-09-29T11:31:58.807Z"
+  },
+  {
+    "name": "きじゅつ",
+    "id": "NjeVgycQTr",
+    "createdAt": "2025-11-17T02:30:08.492Z",
+    "updatedAt": "2025-11-17T03:24:07.036Z",
+    "publishedAt": "2025-10-04T22:00:17.903Z",
+    "revisedAt": "2025-10-05T17:38:52.901Z"
+  },
+  {
+    "name": "皇太子妃",
+    "id": "ptzduElqEg",
+    "createdAt": "2026-04-15T02:39:25.774Z",
+    "updatedAt": "2026-04-16T00:40:43.150Z",
+    "publishedAt": "2024-11-18T21:36:45.957Z",
+    "revisedAt": "2024-11-19T03:53:13.977Z"
+  },
+  {
+    "name": "シアトルし",
+    "id": "wbSqoEQTiY",
+    "createdAt": "2026-01-28T13:17:55.000Z",
+    "updatedAt": "2026-01-29T12:56:11.823Z",
+    "publishedAt": "2025-06-14T20:34:49.202Z",
+    "revisedAt": "2025-06-15T06:03:23.939Z"
+  },
+  {
+    "name": "かくれる",
+    "id": "qUeQJsUmEr",
+    "createdAt": "2026-10-03T12:50:50.202Z",
+    "updatedAt": "2026-10-04T08:42:46.867Z",
+    "publishedAt": "2026-02-21T07:36:40.629Z",
+    "revisedAt": "2026-02-21T16:01:41.111Z"
+  },
+  {
+    "name": "漠然",
+    "id": "OLzNxCSQmv",
+    "createdAt": "2026-02-03T04:29:11.185Z",
+    "updatedAt": "2026-02-03T14:02:39.473Z",
+    "publishedAt": "2025-12-10T01:27:34.577Z",
+    "revisedAt": "2025-12-10T12:56:05.292Z"
+  },
+  {
+    "name": "ふくし",
+    "id": "OPhEYjFjnw",
+    "createdAt": "2025-06-21T04:12:20.368Z",
+    "updatedAt": "2025-06-21T18:53:15.927Z",
+    "publishedAt": "2026-05-30T12:49:22.566Z",
+    "revisedAt": "2026-05-31T10:52:56.277Z"
+  },
+  {
+    "name": "ちょさくけん",
+    "id": "xDHdfEbgsH",
+    "createdAt": "2025-12-31T09:12:28.188Z",
+    "updatedAt": "2025-12-31T12:24:42.631Z",
+    "publishedAt": "2025-03-19T04:21:57.835Z",
+    "revisedAt": "2025-03-19T17:53:37.577Z"
+  },
+  {
+    "name": "お盆",
+    "id": "DibeCxKrwX",
+    "createdAt": "2025-06-18T07:24:02.449Z",
+    "updatedAt": "2025-06-19T02:24:28.701Z",
+    "publishedAt": "2026-03-06T20:02:31.105Z",
+    "revisedAt": "2026-03-07T05:09:23.889Z"
+  },
+  {
+    "name": "火",
+    "id": "RTDEzVWETy",
+    "createdAt": "2025-11-17T14:26:49.981Z",
+    "updatedAt": "2025-11-17T16:34:36.230Z",
+    "publishedAt": "2026-05-04T19:36:47.814Z",
+    "revisedAt": "2026-05-05T15:18:06.610Z"
+  },
+  {
+    "name": "じっかん",
+    "id": "sHzeQDtHUV",
+    "createdAt": "2025-11-09T21:16:19.421Z",
+    "updatedAt": "2025-11-09T22:42:59.426Z",
+    "publishedAt": "2026-01-10T03:32:01.836Z",
+    "revisedAt": "2026-01-10T05:42:30.560Z"
+  },
+  {
+    "name": "抑制",
+    "id": "sTAwDuImuZ",
+    "createdAt": "2025-09-16T03:23:11.751Z",
+    "updatedAt": "2025-09-16T21:27:30.562Z",
+    "publishedAt": "2026-02-16T11:24:57.942Z",
+    "revisedAt": "2026-02-16T12:00:04.690Z"
+  },
+  {
+    "name": "はなはだ",
+    "id": "deHeZjqpWA",
+    "createdAt": "2024-12-03T14:33:02.604Z",
+    "updatedAt": "2024-12-03T23:10:30.313Z",
+    "publishedAt": "2026-06-26T03:42:17.559Z",
+    "revisedAt": "2026-06-27T02:20:38.082Z"
+  },
+  {
+    "name": "いじん",
+    "id": "ahBdCtytHW",
+    "createdAt": "2025-05-04T07:32:29.823Z",
+    "updatedAt": "2025-05-04T12:10:31.840Z",
+    "publishedAt": "2025-06-05T07:23:08.575Z",
+    "revisedAt": "2025-06-05T09:43:50.777Z"
+  },
+  {
+    "name": "割り箸",
+    "id": "IVWhfizYmt",
+    "createdAt": "2025-03-06T13:47:35.880Z",
+    "updatedAt": "2025-03-07T11:24:56.351Z",
+    "publishedAt": "2025-02-01T19:11:10.052Z",
+    "revisedAt": "2025-02-02T09:10:40.419Z"
+  },
+  {
+    "name": "誘惑",
+    "id": "nxboQKJgwr",
+    "createdAt": "2024-12-17T03:14:55.743Z",
+    "updatedAt": "2024-12-17T23:03:33.755Z",
+    "publishedAt": "2026-04-21T10:57:55.213Z",
+    "revisedAt": "2026-04-22T05:55:38.395Z"
+  },
+  {
+    "name": "廃棄",
+    "id": "dObXtqVrtM",
+    "createdAt": "2026-08-09T00:15:47.099Z",
+    "updatedAt": "2026-08-09T15:28:57.502Z",
+    "publishedAt": "2025-07-26T15:26:41.591Z",
+    "revisedAt": "2025-07-27T00:53:44.993Z"
+  },
+  {
+    "name": "える",
+    "id": "sewfUDlJhx",
+    "createdAt": "2026-03-05T13:05:55.192Z",
+    "updatedAt": "2026-03-05T13:45:26.827Z",
+    "publishedAt": "2026-02-27T18:37:40.998Z",
+    "revisedAt": "2026-02-28T12:24:11.888Z"
+  },
+  {
+    "name": "のき",
+    "id": "oGCucRBoMH",
+    "createdAt": "2026-05-18T06:07:32.766Z",
+    "updatedAt": "2026-05-18T15:18:10.667Z",
+    "publishedAt": "2025-02-21T01:54:19.468Z",
+    "revisedAt": "2025-02-21T11:41:16.713Z"
+  },
+  {
+    "name": "壁",
+    "id": "leKCVTGNQz",
+    "createdAt": "2024-12-14T03:28:39.093Z",
+    "updatedAt": "2024-12-14T17:14:48.580Z",
+    "publishedAt": "2026-06-27T15:58:36.808Z",
+    "revisedAt": "2026-06-27T18:23:44.029Z"
+  },
+  {
+    "name": "碁",
+    "id": "dEhPqFvbUY",
+    "createdAt": "2024-11-05T16:08:03.955Z",
+    "updatedAt": "2024-11-05T21:20:34.322Z",
+    "publishedAt": "2025-12-01T22:04:47.806Z",
+    "revisedAt": "2025-12-01T22:18:55.015Z"
+  },
+  {
+    "name": "けいけんしゃ",
+    "id": "XwHFwCYrLW",
+    "createdAt": "2025-05-09T14:16:09.892Z",
+    "updatedAt": "2025-05-09T18:29:52.778Z",
+    "publishedAt": "2026-09-06T06:38:53.172Z",
+    "revisedAt": "2026-09-06T08:24:37.339Z"
+  },
+  {
+    "name": "あらす",
+    "id": "maZpWVwnpK",
+    "createdAt": "2025-05-04T03:42:24.181Z",
+    "updatedAt": "2025-05-04T08:26:43.761Z",
+    "publishedAt": "2026-09-18T23:24:17.198Z",
+    "revisedAt": "2026-09-19T18:23:58.235Z"
+  },
+  {
+    "name": "鈍器",
+    "id": "nrVFnHQXan",
+    "createdAt": "2026-07-12T21:38:03.550Z",
+    "updatedAt": "2026-07-13T07:16:04.586Z",
+    "publishedAt": "2025-03-21T19:07:08.081Z",
+    "revisedAt": "2025-03-22T07:02:19.915Z"
+  },
+  {
+    "name": "さいげつ",
+    "id": "BExgRGQfNm",
+    "createdAt": "2025-05-13T07:12:34.515Z",
+    "updatedAt": "2025-05-14T04:57:32.631Z",
+    "publishedAt": "2025-07-14T01:25:46.955Z",
+    "revisedAt": "2025-07-14T21:24:36.408Z"
+  },
+  {
+    "name": "ほにゅうびん",
+    "id": "uodflqKcEq",
+    "createdAt": "2025-09-15T14:20:10.290Z",
+    "updatedAt": "2025-09-15T22:46:01.288Z",
+    "publishedAt": "2025-03-08T16:15:32.437Z",
+    "revisedAt": "2025-03-09T15:54:22.985Z"
+  }
+]
