@@ -4,13 +4,13 @@ import Link from 'next/link';
 import { jetBrainsMono } from '@/lib/fonts';
 import NextTopLoader from 'nextjs-toploader';
 
-if (process.env.NEXT_RUNTIME === "nodejs" && process.env.ENABLE_MSW === "true") {
+if (process.env.NEXT_RUNTIME === "nodejs" && process.env.NEXT_PUBLIC_ENABLE_MSW === "true") {
   const { server } = await import("@/lib/msw/setup/server");
   server.listen();
 }
 
 async function MswProvider({children}: {children: ReactNode}) {
-  if (process.env.ENABLE_MSW === "true") {
+  if (process.env.NEXT_PUBLIC_ENABLE_MSW === "true") {
     const MswProvider = (await import('@/lib/msw/provider')).default;
     return <MswProvider>{children}</MswProvider>
   }
