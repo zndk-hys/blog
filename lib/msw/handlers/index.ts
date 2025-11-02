@@ -1,6 +1,6 @@
 import { http, HttpResponse } from "msw";
-import tagList from "@/mocks/fixtures/tag.json" assert { type: "json" };
-import blogList from "@/mocks/fixtures/blog.json" assert { type: "json" };
+import tagList from "@/mocks/fixtures/tag.json" with { type: "json" };
+import blogList from "@/mocks/fixtures/blog.json" with { type: "json" };
 import { POSTS_PER_PAGE } from "@/constants";
 
 export const handlers = [

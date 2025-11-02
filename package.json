@@ -3,24 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "gen:mocks": "tsx ./scripts/generate-mocks.ts"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "^16.0.1",
     "@radix-ui/react-icons": "^1.3.2",
     "date-fns": "^4.1.0",
     "date-fns-tz": "^3.2.0",
     "microcms-js-sdk": "^3.2.0",
-    "next": "15.5.4",
+    "next": "16.0.1",
     "next-sitemap": "^4.2.3",
     "nextjs-toploader": "^3.9.17",
     "radix-ui": "^1.4.3",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "source-map-explorer": "^2.5.3"
   },
   "devDependencies": {
@@ -28,10 +27,10 @@
     "@faker-js/faker": "^10.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
     "eslint": "^9",
-    "eslint-config-next": "15.5.4",
+    "eslint-config-next": "16.0.1",
     "msw": "^2.11.6",
     "tailwindcss": "^4",
     "tsx": "^4.20.6",
@@ -41,5 +40,9 @@
     "workerDirectory": [
       "public"
     ]
+  },
+  "overrides": {
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2"
   }
 }
