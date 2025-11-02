@@ -10,7 +10,7 @@ if (process.env.NEXT_RUNTIME === "nodejs" && process.env.NEXT_PUBLIC_ENABLE_MSW 
 }
 
 async function MswProvider({children}: {children: ReactNode}) {
-  if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_ENABLE_MSW === "true") {
+  if (process.env.NEXT_PUBLIC_ENABLE_MSW === "true") {
     const MswProvider = (await import('@/lib/msw/provider')).default;
     return <MswProvider>{children}</MswProvider>
   }

@@ -9,8 +9,11 @@ type Props = {
 const mockEnablePromise = generateMockEnablePromise();
 
 async function generateMockEnablePromise() {
-  const { worker } = await import('../setup/browser');
-  return worker.start();
+  if ( typeof window !== 'undefined' ) {
+    const { worker } = await import('../setup/browser');
+    return worker.start();
+  }
+  return Promise.resolve();
 }
 
 export default function MswProvider({ children }: Props) {
