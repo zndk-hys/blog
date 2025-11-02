@@ -1,4 +1,5 @@
 import ArticleList from "@/components/ArticleList";
+import { POSTS_PER_PAGE } from "@/constants";
 import { getBlogList, getTagDetail } from "@/lib/microcms";
 import { Metadata } from "next";
 
@@ -27,6 +28,7 @@ export default async function Page(props: Props) {
     getBlogList({
       orders: "-publishedAt",
       filters: `tags[contains]${tagSlug}`,
+      limit: POSTS_PER_PAGE,
     }),
   ]);
 
