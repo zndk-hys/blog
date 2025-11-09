@@ -3,6 +3,10 @@ import { formatDate } from "@/lib/utils";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { unified } from "unified";
+import rehypeParse from "rehype-parse";
+import rehypeShiki from "@shikijs/rehype";
+import rehypeStringify from "rehype-stringify";
 
 export const dynamic = 'force-static';
 export const revalidate = false;
@@ -27,6 +31,14 @@ export default async function Page(props: Props) {
   const params = await props.params;
   const blog = await getBlogDetail(params.slug);
   if (!blog) return <p>記事が見つかりませんでした。</p>;
+
+  const html = await unified()
+    .use(rehypeParse)
+    .use(rehypeShiki, {
+      theme: 'plastic',
+    })
+    .use(rehypeStringify)
+    .process(blog.body);
 
   return (
       <article>
@@ -59,7 +71,7 @@ export default async function Page(props: Props) {
             />
           </div>
         )}
-        <div className="blog-detail" dangerouslySetInnerHTML={{ __html: blog.body }} />
+        <div className="blog-detail" dangerouslySetInnerHTML={{ __html: String(html) }} />
       </article>
   )
 }
