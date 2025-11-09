@@ -33,6 +33,10 @@ export async function getBlogDetail(contentId: string, queries?: MicroCMSQueries
         contentId,
         queries,
         customRequestInit: {
+            cache: 'force-cache',
+            next: {
+                revalidate: false,
+            }
         },
     }).catch(notFound);
 
